@@ -1,0 +1,16 @@
+.product__result{
+    display: flex;
+}
+
+.product__result__img img{
+    width:90px;
+    height: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.product__result__info h6:hover{
+    
+    color: rgb(20, 207, 45);
+    cursor: pointer;
+}

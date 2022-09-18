@@ -1,0 +1,35 @@
+.feacture{
+    position: relative;
+    margin-top: 20px;
+    align-items: center;
+}
+
+
+.feacture__icon{
+    height: 100px;
+    font-size: 3rem;
+    color: rgba(44, 170, 61, 0.897);
+    
+    
+}
+
+.feacture__title{
+    margin-bottom: auto;
+    width: 300px;
+    margin-left: 20px;
+    
+}
+
+.feacture__title h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Futura PT', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+
+    
+}
+
+.feacture__title p{
+    color: #879CC1;
+}

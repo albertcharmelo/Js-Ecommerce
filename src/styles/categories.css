@@ -1,0 +1,52 @@
+.categories__box{
+    background-color: rgb(242,244,236);
+}
+.category_img img{
+    width: 40%;
+    height: auto;
+}
+
+.category_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.category_img img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    
+    
+}
+
+.categories__title::after{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 5px;
+    background-color: rgb(44, 170, 61);
+    margin: 10px auto;
+}
+
+.category__card{
+    background-color: white;
+    margin: 10px;
+    padding: 27px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 313px;
+    height: 250px;
+}
+
+.category__title{
+    color: rgb(110,139,103);
+    text-transform: capitalize;
+    font-family: 'Futura PT', sans-serif;
+}
+
+.category__products_mount{
+    color: #879CC1;
+   
+}
