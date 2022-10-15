@@ -3,6 +3,7 @@ import "./styles/home.css";
 import "./styles/main.css";
 import {getProducts, getOrder} from './services/index.js'
 import Home from "./components/Home";
+import ProducDetails from "./components/ProducDetails";
 import { Route } from "wouter";
 
 
@@ -30,6 +31,10 @@ function App() {
       <Route path="/">
         <Home products={products} productCart={[productCart, setProductCart]} />
       </Route>
+      <Route path="/product/:product_url">
+         { (params) => <ProducDetails params={params} products={products} productCart={[productCart, setProductCart]} />} 
+      </Route>
+
     </>
   );
 }

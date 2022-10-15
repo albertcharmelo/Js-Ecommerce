@@ -3,20 +3,12 @@ import './../../styles/product.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faHeart, faSearch } from '@fortawesome/free-solid-svg-icons'
 import {useDispatch} from 'react-redux';
+import { Link } from "wouter"
 import Notiflix from 'notiflix';
-
-import {useState} from 'react'
-import ModalProduct from './ModalProduct';
-
-
-
-
-
-
 
 export const Product = ({product}) =>{
   const dispatch = useDispatch();
-  const [modal, setModal] = useState(false);
+  
   const handleAddCart = (e,Newproduct) => {
     e.preventDefault()
     dispatch({
@@ -57,18 +49,14 @@ export const Product = ({product}) =>{
     
       <div className="product2__card">
         <div className="product2__image__wrap">
+        <Link  href={`/product/${product.url}`}>
           <a className="product2__image">
             <img src={product.product_images[0].url_image} className='pop__cart__image' alt={`Imagen del producto ${product.name}`} />         
           </a>
+        </Link>
+          
           <div className="product2__option__container">
             <ul>
-              <li>
-                <a href="#" onClick={(e)=>openModal(e)}>
-                  <FontAwesomeIcon   icon={faSearch} />
-                  <ModalProduct isOpen={modal} setIsOpen={setModal}/>
-                  <span className="ht-product-action-tooltip">Vista Rapida</span>
-                </a>
-              </li>
               <li>
                 <a onClick={(e) => handleAddCart(e,product)} >
                   <FontAwesomeIcon icon={faShoppingCart} />
