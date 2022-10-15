@@ -2,7 +2,7 @@ import React from 'react'
 import { useRef,useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import './../styles/productResult.css'
+import './../../styles/productResult.css'
 const SearchSlider = ({products}) => {
   const [searchedProducts, setsearchedProducts] = useState([]);
   const closeNav = () => {
@@ -17,7 +17,7 @@ const SearchSlider = ({products}) => {
 
   }
 
-  console.log(searchInput.current.value != '');
+  
 
   return (
     <div className='search__container'>

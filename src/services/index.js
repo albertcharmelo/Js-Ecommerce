@@ -11,3 +11,25 @@ export const getProducts = async () => {
   `)
   return {error, products}
 }
+
+
+
+export const getOrder = async (id) => {
+    let { data: order, error } = await supabase
+  .from('orders')
+  .select(`
+    *,
+    order_products (
+        *,
+        products (
+            *,
+            product_images (
+                *
+            )
+        )
+    )
+  `)
+  .eq('id', id)
+  return {error, order}
+}
+

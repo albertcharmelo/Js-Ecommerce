@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane,faShoppingBag,faWallet,faMobile } from '@fortawesome/free-solid-svg-icons'
-import './../styles/feactures.css'
+import './../../styles/feactures.css'
 
 import Feacture from './Feacture'
 
